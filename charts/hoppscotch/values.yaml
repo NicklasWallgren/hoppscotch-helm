@@ -17,17 +17,17 @@ global:
     runAsNonRoot: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
-    runAsUser: 15000
-    runAsGroup: 15000
+#    runAsUser: 15000 -- Not possible due to OpenShift handling of UID range
+#    runAsGroup: 15000
     capabilities:
       drop:
       - ALL
   # -- Toggle and define global container-level security context.
   # @default -- `{}` (See [values.yaml])
   containerSecurityContext:
-    runAsUser: 15000
-    runAsGroup: 15000
-    fsGroup: 15000
+#    runAsUser: 15000 -- Not possible due to OpenShift handling of UID range
+#    runAsGroup: 15000
+#    fsGroup: 15000
     seccompProfile:
       type: RuntimeDefault
 
@@ -132,8 +132,8 @@ web:
   ## Hoppscotch web image
   image:
     # -- Repository to use for the Hoppscotch web
-    # @default -- `"ghcr.io/wdaan/hoppscotch-web"`
-    repository: "ghcr.io/wdaan/hoppscotch-web" # defaults to global.image.repository
+    # @default -- `"ghcr.io/NicklasWallgren/hoppscotch-web"`
+    repository: "ghcr.io/NicklasWallgren/hoppscotch-web" # defaults to global.image.repository
     # -- Tag to use for the Hoppscotch web
     # @default -- `""` (defaults to global.image.tag)
     tag: "" # defaults to global.image.tag
@@ -385,8 +385,8 @@ admin:
   ## Hoppscotch web image
   image:
     # -- Repository to use for the Hoppscotch web
-    # @default -- `"ghcr.io/wdaan/hoppscotch-admin"`
-    repository: "ghcr.io/wdaan/hoppscotch-admin" # defaults to global.image.repository
+    # @default -- `"ghcr.io/NicklasWallgren/hoppscotch-admin"`
+    repository: "ghcr.io/NicklasWallgren/hoppscotch-admin" # defaults to global.image.repository
     # -- Tag to use for the Hoppscotch web
     # @default -- `""` (defaults to global.image.tag)
     tag: "" # defaults to global.image.tag
@@ -638,8 +638,8 @@ backend:
   ## Hoppscotch web image
   image:
     # -- Repository to use for the Hoppscotch web
-    # @default -- `"ghcr.io/wdaan/hoppscotch-backend"`
-    repository: "ghcr.io/wdaan/hoppscotch-backend"
+    # @default -- `"ghcr.io/NicklasWallgren/hoppscotch-backend"`
+    repository: "ghcr.io/NicklasWallgren/hoppscotch-backend"
     # -- Tag to use for the Hoppscotch web
     # @default -- `""` (defaults to global.image.tag)
     tag: "" # defaults to global.image.tag

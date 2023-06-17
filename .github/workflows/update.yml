@@ -44,7 +44,7 @@ jobs:
           context: .
           target: prod
           push: true
-          tags: ghcr.io/wdaan/hoppscotch-backend:${{ steps.fetch_tag.outputs.tag }}
+          tags: ghcr.io/NicklasWallgren/hoppscotch-backend:${{ steps.fetch_tag.outputs.tag }}
 
       - name: Build and publish Docker image (web)
         uses: docker/build-push-action@v4
@@ -52,7 +52,7 @@ jobs:
           file: packages/hoppscotch-selfhost-web/Dockerfile
           context: .
           push: true
-          tags: ghcr.io/wdaan/hoppscotch-web:${{ steps.fetch_tag.outputs.tag }}
+          tags: ghcr.io/NicklasWallgren/hoppscotch-web:${{ steps.fetch_tag.outputs.tag }}
       
       - name: Build and publish Docker image (Admin)
         uses: docker/build-push-action@v4
@@ -60,7 +60,7 @@ jobs:
           file: packages/hoppscotch-sh-admin/Dockerfile
           context: .
           push: true
-          tags: ghcr.io/wdaan/hoppscotch-admin:${{ steps.fetch_tag.outputs.tag }}
+          tags: ghcr.io/NicklasWallgren/hoppscotch-admin:${{ steps.fetch_tag.outputs.tag }}
 
   update-chart-versions:
     runs-on: ubuntu-latest
