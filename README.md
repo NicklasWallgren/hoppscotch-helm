@@ -2,7 +2,7 @@
 
 <!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
 
-![Chart Version](https://img.shields.io/github/v/release/wdaan/hoppscotch-helm?label=chart%20version)
+![Chart Version](https://img.shields.io/github/v/release/nicklaswallgren/hoppscotch-helm?label=chart%20version)
 ![hoppscotch Version](https://img.shields.io/github/v/release/hoppscotch/hoppscotch?color=green&label=hoppscotch%20version)
 
 # Disclaimer
@@ -31,7 +31,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```console
-helm repo add hoppscotch https://wdaan.github.io/hoppscotch-helm/
+helm repo add hoppscotch https://nicklaswallgren.github.io/hoppscotch-helm/
 ```
 
 You can then run `helm search repo hoppscotch` to see the charts.
