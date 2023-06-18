@@ -3,6 +3,17 @@ entries:
   hoppscotch:
   - apiVersion: v2
     appVersion: 2023.4.6
+    created: "2023-06-18T09:45:17.114422405Z"
+    description: Hoppscotch is a light-weight, web based API development suite.
+    digest: 2b6bb9d8fb6b00669852d3af7a8e602d2efc3b4350a8bc21dbf816c046fd5d29
+    home: https://hoppscotch.io
+    name: hoppscotch
+    type: application
+    urls:
+    - https://github.com/NicklasWallgren/hoppscotch-helm/releases/download/hoppscotch-0.3.0/hoppscotch-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 2023.4.6
     created: "2023-06-17T14:26:20.25878575Z"
     description: Hoppscotch is a light-weight, web based API development suite.
     digest: bea715180d642ac4e1a54cf9cefe450bb041a794b871182dada419c95de63724
@@ -23,4 +34,4 @@ entries:
     urls:
     - https://github.com/NicklasWallgren/hoppscotch-helm/releases/download/hoppscotch-0.1.0/hoppscotch-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-17T14:26:20.25880215Z"
+generated: "2023-06-18T09:45:17.114465823Z"
