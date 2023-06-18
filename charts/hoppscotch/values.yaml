@@ -17,17 +17,21 @@ global:
     runAsNonRoot: true
     readOnlyRootFilesystem: true
     allowPrivilegeEscalation: false
-#    runAsUser: 15000 -- Not possible due to OpenShift handling of UID range
-#    runAsGroup: 15000
+    runAsUser: null # Not possible due to OpenShift handling of UID range
+    runAsGroup: null # Not possible due to OpenShift handling of UID range
+    seccompProfile:
+      type: RuntimeDefault
     capabilities:
       drop:
       - ALL
   # -- Toggle and define global container-level security context.
   # @default -- `{}` (See [values.yaml])
   containerSecurityContext:
-#    runAsUser: 15000 -- Not possible due to OpenShift handling of UID range
-#    runAsGroup: 15000
-#    fsGroup: 15000
+    runAsUser: null # Not possible due to OpenShift handling of UID range
+    runAsGroup: null # Not possible due to OpenShift handling of UID range
+    runAsNonRoot: true
+    fsGroup: null # Not possible due to OpenShift handling of UID range
+    allowPrivilegeEscalation: false
     seccompProfile:
       type: RuntimeDefault
 
